@@ -1,8 +1,9 @@
 ﻿namespace BlazorAppPractice.Api.Entities
 {
-    public class Cart
+    public class User
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserName { get; set; }
+
     }
 }
