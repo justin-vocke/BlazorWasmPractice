@@ -491,6 +491,16 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "BlazorAppPractice.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BlazorAppPractice.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorAppPractice.Models.dll": {}
+        }
       }
     },
     "net8.0/browser-wasm": {
@@ -976,6 +986,16 @@
         },
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
+        }
+      },
+      "BlazorAppPractice.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BlazorAppPractice.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorAppPractice.Models.dll": {}
         }
       }
     }
@@ -2046,10 +2066,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "BlazorAppPractice.Models/1.0.0": {
+      "type": "project",
+      "path": "../BlazorAppPractice.Models/BlazorAppPractice.Models.csproj",
+      "msbuildProject": "../BlazorAppPractice.Models/BlazorAppPractice.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BlazorAppPractice.Models >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.1",
       "Microsoft.NET.ILLink.Tasks >= 8.0.1",
@@ -2088,7 +2114,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Justin Vocke\\source\\repos\\BlazorAppPractice\\BlazorAppPractice.Models\\BlazorAppPractice.Models.csproj": {
+              "projectPath": "C:\\Users\\Justin Vocke\\source\\repos\\BlazorAppPractice\\BlazorAppPractice.Models\\BlazorAppPractice.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

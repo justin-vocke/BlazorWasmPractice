@@ -1,28 +1,36 @@
-﻿using BlazorAppPractice.Api.Entities;
+﻿using BlazorAppPractice.Api.Data;
+using BlazorAppPractice.Api.Entities;
 using BlazorAppPractice.Api.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorAppPractice.Api.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        public Task<IEnumerable<Product>> GetProduct(int id)
+        private readonly ShopOnlineContext _context;
+
+        public ProductRepository(ShopOnlineContext shopOnlineContext)
+        {
+            _context = shopOnlineContext;
+        }
+        public Task<Product> GetProduct(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<ProductCategory>> GetProductCategories()
+        public async Task<IEnumerable<ProductCategory>> GetProductCategories()
         {
-            throw new NotImplementedException();
+            return await _context.ProductCategories.ToListAsync();
         }
 
-        public Task<IEnumerable<ProductCategory>> GetProductCategory(int id)
+        public async Task<ProductCategory> GetProductCategory(int id)
         {
-            throw new NotImplementedException();
+            return await _context.ProductCategories.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public Task<IEnumerable<Product>> GetProducts()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
-            throw new NotImplementedException();
+            return await _context.Products.ToListAsync();
         }
     }
 }
