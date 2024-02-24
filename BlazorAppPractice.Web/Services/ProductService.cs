@@ -1,13 +1,29 @@
 ﻿using BlazorAppPractice.Models.Dtos;
 using BlazorAppPractice.Web.Services.Contracts;
+using System.Net.Http.Json;
 
 namespace BlazorAppPractice.Web.Services
 {
     public class ProductService : IProductService
     {
-        public Task<IEnumerable<ProductDto>> GetItems()
+        private readonly HttpClient _httpClient;
+
+        public ProductService(HttpClient httpClient)
         {
-            throw new NotImplementedException();
+            _httpClient = httpClient;
+        }
+        public async Task<IEnumerable<ProductDto>> GetItems()
+        {
+            try
+            {
+                var products = await _httpClient.GetFromJsonAsync<IEnumerable<ProductDto>>("api/Product");
+                return products;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

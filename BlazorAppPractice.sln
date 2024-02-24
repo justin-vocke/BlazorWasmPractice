@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppPractice.Web", "BlazorAppPractice.Web\BlazorAppPractice.Web.csproj", "{1BC83D01-5177-4D7E-B67A-3211F7D929EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppPractice.Web", "BlazorAppPractice.Web\BlazorAppPractice.Web.csproj", "{1BC83D01-5177-4D7E-B67A-3211F7D929EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppPractice.Api", "BlazorAppPractice.Api\BlazorAppPractice.Api.csproj", "{7100A59A-0D3A-4C25-939A-5D344C1335DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppPractice.Api", "BlazorAppPractice.Api\BlazorAppPractice.Api.csproj", "{7100A59A-0D3A-4C25-939A-5D344C1335DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppPractice.Models", "BlazorAppPractice.Models\BlazorAppPractice.Models.csproj", "{3B4A5AEC-BAF3-4EE6-96CF-2140C487C6AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppPractice.Models", "BlazorAppPractice.Models\BlazorAppPractice.Models.csproj", "{3B4A5AEC-BAF3-4EE6-96CF-2140C487C6AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
