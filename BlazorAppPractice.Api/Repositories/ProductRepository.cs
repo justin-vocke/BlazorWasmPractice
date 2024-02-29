@@ -25,7 +25,7 @@ namespace BlazorAppPractice.Api.Repositories
 
         public async Task<ProductCategory> GetProductCategory(int id)
         {
-            return await _context.ProductCategories.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.ProductCategories.SingleOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IEnumerable<Product>> GetProducts()

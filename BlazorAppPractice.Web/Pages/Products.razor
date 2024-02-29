@@ -14,20 +14,17 @@ else
 
     @if(productCount > 0)
     {
-        const int itemsPerRow = 4;
-        var productRowList = new List<ProductDto>();
-
-        @for(int i = 0; i < productCount; i++)
+ 
+        @foreach(var prodGroup in GetGroupedProductsByBategory())
         {
-            productRowList = Products.Skip(i * 4).Take(itemsPerRow).ToList();
+        <div class="row mt-3">
+            <h4>@GetCategoryName(prodGroup)</h4>
+            <DisplayProducts Products="@prodGroup.Take(4)"></DisplayProducts>
+        </div>
+        <hr class="mb-3"/>
 
-            <div class="row mt-3">
-                
-                <DisplayProducts Products="@productRowList"></DisplayProducts>
-
-            </div>
-            
         }
+                    
     }
 
 }
